@@ -52,52 +52,58 @@ public class Accoutn1 {
         System.out.println("ENter 6 for deactivate account");
         System.out.println("Enter 7 for exiting");
         System.out.println("Enter:");
-        int x = sc.nextInt();
-        switch (x) {
-            case 1: {
-                System.out.println("Your account number is:" + acc[2].balance);
-                break;
-            }
-            case 2: {
-                System.out.println("Enter money to be withdrawn");
-                int s = sc.nextInt();
-                acc[j].balance -= s;
-                System.out.println("Your account number is:" + acc[2].balance);
-                break;
-            }
-            case 3: {
-                System.out.println("Enter money to be deposited");
-                int s = sc.nextInt();
-                acc[j].balance += s;
-                System.out.println(acc[2].balance);
-                break;
-            }
-            case 4: {
-                System.out.println("Enter money to be transferred");
-                int s = sc.nextInt();
-                System.out.print("To be transferred in :");
-                int i = sc.nextInt();
-                acc[i].balance += s;
-                acc[j].balance -= s;
-                System.out.println("Balance in ur account" + acc[j].balance);
+        int x;
+        do {
+            x = sc.nextInt();
+            switch (x) {
+                case 1: {
+                    System.out.println("Your account number is:" + acc[2].balance);
+                    break;
+                }
+                case 2: {
+                    System.out.println("Enter money to be withdrawn");
+                    int s = sc.nextInt();
+                    acc[j].balance -= s;
+                    System.out.println("Your account number is:" + acc[j].balance);
+                    break;
+                }
+                case 3: {
+                    System.out.println("Enter money to be deposited");
+                    int s = sc.nextInt();
+                    acc[j].balance += s;
+                    System.out.println(acc[j].balance);
+                    break;
+                }
+                case 4: {
+                    System.out.println("Enter money to be transferred");
+                    int s = sc.nextInt();
+                    System.out.print("To be transferred in :");
+                    int i = sc.nextInt();
+                    acc[i].balance += s;
+                    acc[j].balance -= s;
+                    System.out.println("Balance in ur account" + acc[j].balance);
 
-                System.out.println("Balance in other's account" + acc[i].balance);
-                break;
+                    System.out.println("Balance in other's account" + acc[i].balance);
+                    break;
+
+                }
+                case 5: {
+                    acc[11] = new Accoutn1();
+                    System.out.println("Account created");
+                    break;
+
+                }
+                case 6: {
+                    acc[j].balance = 0;
+                    acc[j].id = "0A";
+                    break;
+                }
+                case 7: {
+                    System.out.println("You can leave");
+                }
 
             }
-            case 5: {
-                acc[11] = new Accoutn1();
-                System.out.println("Account created");
-                break;
-
-            }
-            case 6: {
-                acc[j].balance = 0;
-                acc[j].id = "0A";
-                break;
-            }
-
-        }
+        } while (x != 7);
 
     }
 }
