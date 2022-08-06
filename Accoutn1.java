@@ -1,3 +1,10 @@
+/* 21CE052 Harshal Karangale 
+Use the Account class created as above to simulate an ATM machine. Create 10 accounts  with id AC001.....AC010  with  initial balance 300₹. The system prompts the 
+users to enter an id. If the id is entered incorrectly, ask the  user  to  enter  a  correct  id.  Once  an  id  is  accepted,  display  menu  with multiple choices.
+1.Balance inquiry2.Withdraw money [Maintain minimum balance 300₹]3.Deposit money4.Money Transfer5.Create Account6.Deactivate Account7.Exit Hint: Use ArrayList, which
+is can shrink and expand with compared to Array.*/
+
+
 import java.util.Scanner;
 
 public class Accoutn1 {
